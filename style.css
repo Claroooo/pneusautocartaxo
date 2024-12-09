@@ -1,0 +1,30 @@
+.container .snow{
+    display: flex;
+}
+
+.container .snow span{
+    min-width: 5px;
+    height: 5px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: -100px 20px 5px #ffffff,
+    -100px 20px 10px #ffffff;
+    margin: 0 1vw;
+    transform: translateY(-10vh);
+    animation: animateSnow calc(75s / var(--i)) linear infinite;
+}
+
+@keyframes animateSnow {
+    0% {
+        transform: translateY(-10vh);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.container .snow span:nth-of-type(even){
+    min-width: 8px;
+    height: 8px;
+
+}
